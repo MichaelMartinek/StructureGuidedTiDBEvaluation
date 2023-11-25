@@ -1,0 +1,2 @@
+SELECT min(artist_credit.id) FROM "recording", "artist_credit", "release_group", "track", "artist_credit_name", "artist" WHERE "recording"."artist_credit" = "artist_credit"."id" AND "artist_credit"."id" = "release_group"."artist_credit" AND "artist_credit"."id" = "track"."artist_credit" AND "artist_credit"."id" = "artist_credit_name"."artist_credit" AND "artist_credit_name"."artist" = "artist"."id";
+

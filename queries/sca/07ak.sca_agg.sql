@@ -1,0 +1,2 @@
+SELECT min(release.id) FROM "release_unknown_country", "release", "release_packaging", "release_group", "language", "release_label", "release_country" WHERE "release_unknown_country"."release" = "release"."id" AND "release"."packaging" = "release_packaging"."id" AND "release"."release_group" = "release_group"."id" AND "release"."language" = "language"."id" AND "release"."id" = "release_label"."release" AND "release"."id" = "release_country"."release";
+
